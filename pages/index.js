@@ -1,9 +1,9 @@
 import List from '../components/List'
-const Index = () => {
+const index = () => {
   return (
     <div>
       <List></List>
     </div>
   )  
 }
-export default Index
+export default index
