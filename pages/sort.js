@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Router from 'next/router'
 import axios from 'axios'
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -97,7 +98,7 @@ const sort = () => {
                                     <TableRow key={parseInt(item.sid)}>
                                         <TableCell align='center'>{item.name}</TableCell>
                                         <TableCell align='center'>{item.text}</TableCell>
-                                        <TableCell align='center'>{item.sid}</TableCell>
+                                        <TableCell align='center' onClick={() => {Router.push(`/sort/${item.sid}`)}}>{item.sid}</TableCell>
                                         <TableCell align='center'>{item.down}</TableCell>
                                         <TableCell align='center'>{item.comment}</TableCell>
                                     </TableRow>
